@@ -12,10 +12,31 @@ Algorithm:
 5.	Call the max_of_four function with the input integers and store the result in the greater variable
  
 Program:
-//type your code here
-
+```
+#include<stdio.h>
+int max_four_no(int a,int b,int c,int d){
+    int max = a;
+    if(b>max){
+        max=b;
+    }
+     if(c>max){
+        max=c;
+    }
+    if(d>max){
+        max=d;
+    }
+    return max;
+}
+int main(){
+    int a,b,c,d;
+    scanf("%d%d%d%d",&a,&b,&c,&d);
+    int ans=max_four_no(a,b,c,d);
+    printf("%d",ans);
+}
+```
 Output:
-//paste your output here
+
+<img width="1167" height="433" alt="image" src="https://github.com/user-attachments/assets/3d3f968e-e66c-469b-b0f0-c8ed147f9ccb" />
 
 Result:
 Thus, the program  that create a function to find the greatest number is verified successfully.
@@ -36,10 +57,42 @@ Algorithm:
 7.	Call the calculate_the_max function with input values.
  
 Program:
-//type your code here
+```
+#include <stdio.h>
 
+int main() {
+    int n, k;
+    scanf("%d %d", &n, &k);
+
+    int max_and = 0;
+    int max_or = 0;
+    int max_xor = 0;
+
+    for (int a = 1; a <= n; a++) {
+        for (int b = a + 1; b <= n; b++) {
+            int and = a & b;
+            int or = a | b;
+            int xor = a ^ b;
+
+            if (and < k && and > max_and) {
+                max_and = and;
+            }
+            if (or < k && or > max_or) {
+                max_or = or;
+            }
+            if (xor < k && xor > max_xor) {
+                max_xor = xor;
+            }
+        }
+    }
+
+    printf("%d\n%d\n%d\n", max_and, max_or, max_xor);
+    return 0;
+}
+
+```
 Output:
-//paste your output here
+
 
 Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
@@ -59,11 +112,37 @@ Algorithm:
 5.	Use a for loop to iterate over the queries.
  
 Program:
-//type your code here
-
+```
+#include<stdio.h>
+#include<stdlib.h>
+int* shelves[1000];
+int bkcount[1000]={0};
+int main()
+{
+    int n,q;
+    scanf("%d %d ",&n,&q);
+    while(q--){
+        int type ,x,y;
+        scanf("%d",&type);
+        if(type==1){
+            scanf("%d %d",&x,&y);
+            shelves[x]=realloc(shelves[x],(bkcount[x]+1)*sizeof(int));
+            shelves[x][bkcount[x]++]=y;
+        }
+        else if(type==2){
+            scanf("%d%d",&x,&y);
+            printf("%d\n",shelves[x][y]);
+        }
+        else if(type==3){
+            scanf("%d",&x);
+            printf("%d\n",bkcount[x]);
+        }
+    }
+}
+```
 Output:
-//paste your output here
 
+<img width="1166" height="323" alt="image" src="https://github.com/user-attachments/assets/5e0840cc-0510-42ed-ad5a-ecae59320b29" />
 
 Result:
 Thus, the program to write the logic for the requests is verified successfully.
@@ -86,13 +165,26 @@ Algorithm:
 
 
 Program:
-//type your code here
+```
+#include<stdio.h>
+int main()
+{
+    int n,sum=0;
+    scanf("%d",&n);
+    int arr[n];
+    for(int i=0;i<n;i++){
+        scanf("%d",&arr[i]);
+    }
+    for(int i=0;i<n;i++){
+        sum+=arr[i];
+    }
+    printf("%d",sum);
+}
 
+```
 Output:
-//paste your output here
 
- 
-
+<img width="1153" height="337" alt="image" src="https://github.com/user-attachments/assets/84fe4a8f-a3a1-4a69-9861-a15497dbdbe6" />
 
 Result:
 Thus, the program prints the sum of the integers in the array is verified successfully.
@@ -120,12 +212,27 @@ o	If a character is not a space, it may belong to a word. If it's the first non-
 
 
 Program:
-//type your code here
-
+```
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char str[100];
+    fgets(str,sizeof(str),stdin);
+    int len=sizeof(str);
+    int count=1;
+     for(int i=0;i<len-1;i++){
+         if(str[i]==' ')
+         count++;
+         
+     }
+     printf("Total number of words in the string is :%d",count);
+    return 0;
+}
+```
 Output:
-//paste your output here
 
-
+<img width="945" height="175" alt="image" src="https://github.com/user-attachments/assets/33461eea-d3ad-4742-8f6f-2fb3c91791ed" />
 
 Result:
 
