@@ -93,6 +93,7 @@ int main() {
 ```
 Output:
 
+<img width="1157" height="458" alt="image" src="https://github.com/user-attachments/assets/88d191f9-bf25-49bd-95a4-b02fe0446ef7" />
 
 Result:
 Thus, the program to print the maximum values for the AND, OR and XOR comparisons
